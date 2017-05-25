@@ -1,7 +1,7 @@
 # REST API Template
-This project should make it easy to bootstrap a REST API. Babel for ES6-ES7 is set up out of the box, along with Eslint standard.
+This project should make it easy to bootstrap a REST API. Babel for ES6-ES7 is set up out of the box, along with Eslint standard. Dockerfile is included for basic containerization.
 
-## Scripts
+## Development
 Stat the dev server:
 ```bash
 npm start
@@ -12,10 +12,6 @@ For TDD mocha is started with --watch, so it re-runs the tests for each file cha
 npm run tdd
 ```
 
-For production build:
-```bash
-npm run build
-```
 ## Adding a new endpoint
 ### 1. Create a new Model (src/models/)
 ```js
@@ -128,5 +124,26 @@ export default router
 
 ### DELETE /todos/:todoId
 - soft deletes the document form the database by flipping *hidden* flag
+
+## Deploy
+For production build:
+```bash
+npm run build
+```
+
+Build a docker image of the app (make sure to change petergombos/api-template in package.json):
+```bash
+npm run build:docker
+```
+
+Run the image (change petergombos/api-template to your image name):
+```bash
+docker run -p 3000:3000 -e DB=MONGODB_HOST petergombos/api-template
+```
+
+Deploy image to DockerHub (test, build, docker image build, docker push)
+```bash
+npm run deploy
+```
 
 That's it, enjoy!
