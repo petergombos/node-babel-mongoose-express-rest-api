@@ -1,5 +1,12 @@
-# REST API Template
-This project should make it easy to bootstrap a REST API. Babel for ES6-ES7 is set up out of the box, along with Eslint standard. Dockerfile is included for basic containerization.
+# Express, Mongoose REST API
+This project should make it easy to bootstrap an API. Babel for ES6-ES7 is set up out of the box, along with Eslint standard. A Dockerfile is also included for basic containerization.
+
+## Other Goodies
+- [CORS](https://github.com/expressjs/cors) is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
+- [Helmet](https://github.com/helmetjs/helmet) helps you secure your Express apps by setting various HTTP headers. It's not a silver bullet, but it can help!
+- [Winston](https://github.com/winstonjs/winston) A multi-transport async logging library for node.js. "CHILL WINSTON! ... I put it in the logs."
+- [Bluebird](http://bluebirdjs.com/) is a full featured promise library with unmatched performance.
+- [express-validation](https://github.com/andrewkeig/express-validation) is a middleware that validates the body, params, query, headers and cookies of a request and returns a response with errors; if any of the configured validation rules fail.
 
 ## Development
 Stat the dev server:
